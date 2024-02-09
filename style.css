@@ -1,0 +1,115 @@
+:root {
+    --purp: #5041b0;
+    --green: #009c7b;
+    --pink: #ed619c;
+    --orange: #fb6f50;
+    --blue: #4facf7;
+    --dark-bg: #001122;
+    --light-bg: #fff6f6;
+}
+
+.orange {
+    color: var(--orange);
+}
+.green {
+    color: var(--green);
+}
+.blue {
+    color: var(--blue);
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #001122;
+    color: #fff;
+    font-weight: 200;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100dvh;
+    justify-content: center;
+    max-width: 1080px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.pixel {
+    /* font-family: 'Silkscreen', sans-serif; */
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 50px;
+    margin: 10px 0 0;
+}
+h2 {
+    font-size: 50px;    
+    font-weight: 200;
+}
+
+#svg-top, #svg-bottom {
+    position: absolute;
+}
+#svg-top {
+    z-index: -2;
+    background: radial-gradient(at center, #fff 10%, #ed619c 30%, #ed619b00 50%);
+    /* background: radial-gradient(at center, #fff 10%, #4facf7 30%, #4fabf700 50%); */
+}
+/* .svg-shadow {
+    filter: drop-shadow( 0 0 5px #fff) drop-shadow( 0 0 15px #e60073) drop-shadow( 0 0 20px #e60073);
+}
+   */
+  /* @keyframes svg-shadow {
+    from {
+      filter: drop-shadow( 0 0 5px #fff) drop-shadow( 0 0 15px #e60073) drop-shadow( 0 0 20px #e60073);
+    }
+  
+    to {
+      
+      filter: drop-shadow( 0 0 20px #fff) drop-shadow( 0 0 25px #e60073) drop-shadow( 0 0 40px #e60073);
+    }
+  } */
+
+#svg-bottom {
+    z-index: -1;
+}
+#blurry-dots {
+    z-index: -3;
+}
+
+#cli {
+    position: fixed;
+    margin: 0;
+    bottom: 5px;
+    left: 5px;
+    font-size: 13px;
+    opacity: .8;
+}
+#cli::after{
+    content: '';
+    position: absolute;
+    margin-left: 4px;
+    width: 6px;
+    height: 16px;
+    background-color: #ffffff1c;
+    animation: blink 1s step-end infinite;
+}
+@-webkit-keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
