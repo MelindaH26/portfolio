@@ -22,6 +22,8 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     background-color: #001122;
+    background: linear-gradient(-225deg, #65379B 0%, #886AEA 53%, #6457C6 100%);
+    background-attachment: fixed;
     color: #fff;
     font-weight: 200;
 }
