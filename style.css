@@ -21,8 +21,7 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #001122;
-    background: linear-gradient(-225deg, #65379B 0%, #886AEA 53%, #6457C6 100%);
+    background: linear-gradient(-225deg, #4945B6 0%, #6A6DD9 53%, #A695FB 100%);
     background-attachment: fixed;
     color: #fff;
     font-weight: 200;
@@ -31,13 +30,23 @@ body {
 section {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     min-height: 100dvh;
     justify-content: center;
-    max-width: 1080px;
+    max-width: 1200px;
     margin: auto;
     padding: 0 20px;
+}
+
+#home {
+    align-items:end;
+}
+
+.moon {
+    position: absolute;
+    top: 10%;
+    right: 20px;
 }
 
 .pixel {
@@ -48,43 +57,13 @@ section {
 }
 
 h1 {
-    font-weight: 200;
-    font-size: 50px;
+    font-weight: 800;
+    font-size: 96px;
     margin: 10px 0 0;
 }
 h2 {
     font-size: 50px;    
-    font-weight: 200;
-}
-
-#svg-top, #svg-bottom {
-    position: absolute;
-}
-#svg-top {
-    z-index: -2;
-    background: radial-gradient(at center, #fff 10%, #ed619c 30%, #ed619b00 50%);
-    /* background: radial-gradient(at center, #fff 10%, #4facf7 30%, #4fabf700 50%); */
-}
-/* .svg-shadow {
-    filter: drop-shadow( 0 0 5px #fff) drop-shadow( 0 0 15px #e60073) drop-shadow( 0 0 20px #e60073);
-}
-   */
-  /* @keyframes svg-shadow {
-    from {
-      filter: drop-shadow( 0 0 5px #fff) drop-shadow( 0 0 15px #e60073) drop-shadow( 0 0 20px #e60073);
-    }
-  
-    to {
-      
-      filter: drop-shadow( 0 0 20px #fff) drop-shadow( 0 0 25px #e60073) drop-shadow( 0 0 40px #e60073);
-    }
-  } */
-
-#svg-bottom {
-    z-index: -1;
-}
-#blurry-dots {
-    z-index: -3;
+    font-weight: 800;
 }
 
 #cli {
