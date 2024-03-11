@@ -1,71 +1,143 @@
+/***
+GLOBAL STYLES
+***/
 :root {
-    --purp: #5041b0;
-    --green: #009c7b;
-    --pink: #ed619c;
-    --orange: #fb6f50;
-    --blue: #4facf7;
-    --dark-bg: #001122;
-    --light-bg: #fff6f6;
-}
-
-.orange {
-    color: var(--orange);
-}
-.green {
-    color: var(--green);
-}
-.blue {
-    color: var(--blue);
+    --font-primary: 'Inter', sans-serif;
+    --font-monospace: 'Roboto Mono', sans-serif;
+    --max-width: 1200px;
+    --section-padding: 0 20px;
+    --dark-purple: #201E50;
+    --mid-purple: #4945B6;
+    --light-purple: #6A6DD9;
 }
 
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-primary);
     background: linear-gradient(-225deg, #4945B6 0%, #6A6DD9 53%, #A695FB 100%);
     background-attachment: fixed;
     color: #fff;
-    font-weight: 200;
+    font-weight: 400;
 }
 
-section {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    min-height: 100dvh;
-    justify-content: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-}
-
-#home {
-    align-items:end;
-}
-
-.moon {
-    position: absolute;
-    top: 10%;
-    right: 20px;
-}
-
-.pixel {
-    /* font-family: 'Silkscreen', sans-serif; */
-    font-family: 'Roboto Mono', sans-serif;
-    font-weight: 200;
-    font-size: 15px;
-}
-
+/* Fonts */ 
 h1 {
-    font-weight: 800;
+    font-weight: 900;
     font-size: 96px;
     margin: 10px 0 0;
 }
 h2 {
     font-size: 50px;    
-    font-weight: 800;
+    font-weight: 900;
+    width: 100%;
 }
 
+/* Buttons */
+button {
+    font-weight: 800;
+    font-size: 20px;
+    color: #fff;
+    background: linear-gradient(90deg, var(--dark-purple) 0%, var(--mid-purple) 100%);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 10px;
+}
+
+/* Structure */
+section {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 100dvh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: var(--section-padding);
+}
+
+/* Classes */
+.center {
+    text-align: center;
+}
+
+/*** 
+Animations 
+***/
+/* Float */
+@keyframes float {
+	0% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatey(0px);
+	}
+	50% {
+		/* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+		transform: translatey(-20px);
+	}
+	100% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatey(0px);
+	}
+}
+
+@keyframes float-reverse {
+	0% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatey(0px);
+	}
+	50% {
+		/* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+		transform: translatey(15px);
+	}
+	100% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatey(0px);
+	}
+}
+
+/* Blink */
+@-webkit-keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+  
+@keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+/* Header Styles */
+#header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+#header .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: var(--max-width);
+    padding: 40px 20px 0;
+    margin: auto;
+}
+nav ul {
+    display: flex;
+    padding: 0;
+    margin: auto;
+    font-size: 21px;
+    font-weight: 500;
+}
+nav ul li {
+    list-style-type: none;
+    padding: 0 8px;
+}
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* command line section */
 #cli {
     position: fixed;
     margin: 0;
@@ -83,14 +155,33 @@ h2 {
     background-color: #ffffff1c;
     animation: blink 1s step-end infinite;
 }
-@-webkit-keyframes blink {
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
-  }
-  
-  @keyframes blink {
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
-  }
+
+/* Home section */
+#home {
+    align-items:end;
+}
+
+.star {
+    position: absolute;
+    top: 11%;
+    right: calc(360px + 50px);
+    animation: float-reverse 5s ease-in-out infinite;
+    scale: 0.8;
+}
+.moon {
+    position: absolute;
+    top: 22%;
+    right: 80px;
+    animation: float 6s ease-in-out infinite;
+}
+.diamond {
+    position: absolute;
+    top: calc(361px + 16%);
+    right: 0;
+    animation: float-reverse 5s ease-in-out infinite;
+    scale: 0.6;
+}
+
+#intro {
+    margin-bottom: 60px;
+}
