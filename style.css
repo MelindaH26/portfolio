@@ -9,8 +9,13 @@ GLOBAL STYLES
     --dark-purple: #201E50;
     --mid-purple: #4945B6;
     --light-purple: #6A6DD9;
+    --peach: #E7B6D6;
+    --light-blue: #ACC3FC;
 }
-
+html{
+    
+    scroll-snap-type: y proximity;
+}
 body {
     margin: 0;
     font-family: var(--font-primary);
@@ -23,7 +28,7 @@ body {
 /* Fonts */ 
 h1 {
     font-weight: 900;
-    font-size: 96px;
+    font-size: 95px;
     margin: 10px 0 0;
 }
 h2 {
@@ -33,14 +38,21 @@ h2 {
 }
 
 /* Buttons */
-button {
+.button {
     font-weight: 800;
     font-size: 20px;
     color: #fff;
-    background: linear-gradient(90deg, var(--dark-purple) 0%, var(--mid-purple) 100%);
     border: none;
     padding: 8px 20px;
     border-radius: 10px;
+    text-decoration: none;
+    background: linear-gradient(90deg, var(--light-blue) 0%, var(--dark-purple) 50%, var(--mid-purple) 100%);
+    background-size:250% 100%;
+    background-position: 100% 0;
+    transition: background-position 1.2s;
+}
+.button:hover {  
+    background-position: 15% 0;
 }
 
 /* Structure */
@@ -53,6 +65,8 @@ section {
     max-width: var(--max-width);
     margin: auto;
     padding: var(--section-padding);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 /* Classes */
@@ -161,22 +175,27 @@ nav ul li a {
     align-items:end;
 }
 
+#home h2 {
+    margin: 10px auto 25px;
+    font-size: 60px;
+}
+
 .star {
     position: absolute;
     top: 11%;
-    right: calc(360px + 50px);
+    right: calc(360px + 130px);
     animation: float-reverse 5s ease-in-out infinite;
     scale: 0.8;
 }
 .moon {
     position: absolute;
-    top: 22%;
-    right: 80px;
+    top: 24%;
+    right: 100px;
     animation: float 6s ease-in-out infinite;
 }
 .diamond {
     position: absolute;
-    top: calc(361px + 16%);
+    top: calc(361px + 23%);
     right: 0;
     animation: float-reverse 5s ease-in-out infinite;
     scale: 0.6;
