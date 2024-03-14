@@ -36,10 +36,23 @@ h1 {
 h2 {
     font-size: 50px;    
     font-weight: 900;
+    margin: 20px auto;
 }
 h3 {
     font-size: 30px;    
     font-weight: 900;
+    margin: 0;
+}
+
+h4 {
+    font-size: 25px;
+    margin: 0;
+}
+
+p {
+    font-weight: 400;
+    margin-block-start: 0.7em;
+    margin-block-end: 0.7em;
 }
 
 /* Buttons */
@@ -48,21 +61,24 @@ h3 {
     font-size: 20px;
     color: #fff;
     border: none;
+    display: inline-block;
+    margin: 18px;
     padding: 10px 22px;
     border-radius: 10px;
     text-decoration: none;
-    background: linear-gradient(90deg, var(--light-blue) 0%, var(--mid-purple) 30%, var(--dark-purple) 50%, var(--mid-purple) 100%);
+    background: linear-gradient(90deg, var(--light-purple) 0%, var(--mid-purple) 30%, var(--dark-purple) 50%, var(--mid-purple) 100%);
     background-size:250% 100%;
     background-position: 100% 0;
-    transition: background-position 1.2s;
+    transition: all 1.2s;
 }
 .button:hover {  
     background-position: 15% 0;
+    box-shadow: 0 0 9px #fff;
 }
 
 /* Structure */
 section {position: relative;}
-section .inner {
+.inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,6 +97,12 @@ section .inner {
     flex-direction: row;
     justify-content: space-between;
 }
+.narrow {
+    max-width: 750px;
+}
+.medium {
+    max-width: 900px;
+}
 
 /* Classes */
 .center {
@@ -95,9 +117,8 @@ section .inner {
     background: linear-gradient(193deg, #6a6dd982 53%, #a695fb78 100%);
     box-shadow: inset 0 0 6px hsla(0,0%,100%,0.2);
     position: relative;
-    max-width: 300px;
     transition: all 1.7s ease;
-    margin: 28px auto;
+    margin: 28px;
 }
 .card:hover {
     box-shadow: inset 0 0 6px hsla(0,0%,100%,0.4);
@@ -253,6 +274,10 @@ nav ul li a {
     font-size: 60px;
 }
 
+#home .button {
+    margin-left: 0;
+}
+
 .star {
     position: absolute;
     top: 11%;
@@ -279,18 +304,50 @@ nav ul li a {
 }
 
 /* About Section */
-#about {
-    .blob-1{
-        position: absolute;
-        right: 0;
-        bottom: 15%;
-        animation: float 6s ease-in-out infinite;
-    }   
+.blob-1 {
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+    animation: float 6s ease-in-out infinite;
+    scale: 1.5;
+}
+.pop {
+    position: absolute;
+    right: 20%;
+    top: 25%;
+    animation: float-reverse 5s ease-in-out infinite;
 }
 
 /* Skills Section */
 #skills {
     background: linear-gradient(transparent, var(--mid-purple));
+}
+
+.blob-2 {
+    position: absolute;
+    right: 0;
+    bottom: 15%;
+    animation: float 6s ease-in-out infinite;
+}
+.star-2 {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    scale: .7;
+    animation: float 5s ease-in-out infinite;
+}
+
+.icons {
+    margin: 18px auto;
+    display: flex;
+    align-items: center;
+    img {
+        margin-right: 15px;
+    }
+}
+
+#education {
+    background: var(--mid-purple);
 }
 
 /* Projects Section */
@@ -301,4 +358,14 @@ nav ul li a {
 /* Contact Section */
 #contact {
     background: linear-gradient(#201e50b8, transparent);
+}
+
+.p-moon {
+    animation: float 7s ease-in-out infinite;
+}
+
+.mountinan {
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
