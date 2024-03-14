@@ -26,6 +26,9 @@ body {
     color: #fff;
     font-weight: 400;
 }
+img, svg {
+    pointer-events: none;
+}
 
 /* Fonts */ 
 h1 {
@@ -244,7 +247,7 @@ nav ul li a {
 }
 
 /* command line section */
-#cli {
+/* #cli {
     position: fixed;
     margin: 0;
     bottom: 5px;
@@ -260,6 +263,11 @@ nav ul li a {
     height: 16px;
     background-color: #ffffff1c;
     animation: blink 1s step-end infinite;
+} */
+#current-section {
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 
 /* Home section */
