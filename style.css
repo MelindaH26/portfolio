@@ -246,24 +246,6 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* command line section */
-/* #cli {
-    position: fixed;
-    margin: 0;
-    bottom: 5px;
-    left: 5px;
-    font-size: 13px;
-    opacity: .8;
-}
-#cli::after{
-    content: '';
-    position: absolute;
-    margin-left: 4px;
-    width: 6px;
-    height: 16px;
-    background-color: #ffffff1c;
-    animation: blink 1s step-end infinite;
-} */
 #current-section {
     position: fixed;
     bottom: 0;
