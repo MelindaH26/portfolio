@@ -29,6 +29,10 @@ body {
 img, svg {
     pointer-events: none;
 }
+img {
+    max-width: 100%;
+    display: block;
+}
 
 /* Fonts */ 
 h1 {
@@ -56,6 +60,10 @@ p {
     font-weight: 400;
     margin-block-start: 0.7em;
     margin-block-end: 0.7em;
+}
+
+a {
+    color: var(--peach);
 }
 
 /* Buttons */
@@ -94,12 +102,12 @@ section {position: relative;}
     margin: auto;
     padding: var(--section-padding-y) var(--section-padding-x);
 }
-.row {
+/* .row {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
+} */
 .narrow {
     max-width: 750px;
 }
@@ -121,7 +129,6 @@ section {position: relative;}
     box-shadow: inset 0 0 6px hsla(0,0%,100%,0.2);
     position: relative;
     transition: all 1.7s ease;
-    margin: 28px;
 }
 .card:hover {
     box-shadow: inset 0 0 6px hsla(0,0%,100%,0.4);
@@ -313,6 +320,12 @@ nav ul li a {
     background: linear-gradient(transparent, var(--mid-purple));
 }
 
+.skill-card-wrap, .project-grid {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+}
+
 .blob-2 {
     position: absolute;
     right: 0;
@@ -336,18 +349,84 @@ nav ul li a {
     }
 }
 
+/* Education section */
 #education {
     background: var(--mid-purple);
 }
+
+.education-card-wrap {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr;
+}
+
+.moon-s {
+    position: absolute;
+    left: calc(5% - 141px);
+    bottom: calc(5% + 114px);
+    scale: .25;
+    animation: float-reverse 5s ease-in-out infinite;
+}
+
+img.moon-b {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    scale: .8;
+    animation: float 6s ease-in-out infinite;
+}
+
+.star-3 {  
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    scale: .7;
+    animation: float-reverse 4s ease-in-out infinite;
+}
+
 
 /* Projects Section */
 #projects {
     background: linear-gradient(var(--mid-purple), #201e50b8 40%,  #201e50b8);
 }
 
+.tech-stack span {
+    box-shadow: 0 0 8px #fff;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 3px 9px;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.project-row {
+    display: grid;
+    align-items: center;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
+
+/* .project-image {
+    padding: 20px;
+    margin: 0 auto;
+} */
+
 /* Contact Section */
 #contact {
     background: linear-gradient(#201e50b8, transparent);
+    .inner {
+        max-width: 550px;
+        text-align: center;
+    }
+}
+
+.email-link {
+    font-size: 25px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .p-moon {

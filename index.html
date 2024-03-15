@@ -30,7 +30,12 @@
             <div id="intro" name="01">
                 <h1>YOUR NEXT<br/>DEVELOPER?</h1>
                 <h2>Melinda Huurdeman</h2>
-                <a href="#contact" class="button">Get in touch</a>
+                <div class="icons">
+                    <a href="#contact" class="button">Get in touch</a>
+                    <a href="https://github.com/MelindaH26" target="_blank"><img src="./img/github.svg" /></a>
+                    <a href="https://www.linkedin.com/in/melinda-h/" target="_blank"><img src="./img/linkedin.svg" /></a>
+                    <a href="mailto:min.huur@gmail.com"><img src="./img/mail.svg" /></a>
+                </div>
             </div>
             <div class="floaties">
                 <div class="star">
@@ -67,7 +72,7 @@
     </section>
     <section id="about">
         <div class="inner narrow">
-            <div><img src="img/3.png" style="border-radius: 100%;"/></div>
+            <img src="img/melinda-h26.png" />
             <h2>About Me</h2>
             <p>I am a dedicated web developer with over nine years of experience, driven by a commitment to continual learning and growth. My professional journey has encompassed diverse roles, including freelancing, agency work, and in-house positions.</p>
             <p>Specializing in WordPress development, I possess a robust skill set in crafting custom themes, plugins, and integrating APIs. In mid-2023, I made a strategic pivot towards full-stack app development, with a focus on the PERN (PostgreSQL, Express, React, Node) stack.</p>
@@ -80,15 +85,15 @@
     <section id="skills">
         <div class="inner">
             <h2>Skills</h2>
-            <div class="row medium">
-                <div class="card half">
+            <div class="skill-card-wrap medium">
+                <div class="card">
                     <h3>Front-End Development</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel lorem nunc. Sed ligula eros, malesuada non tellus in, fermentum consequat quam.</p>
                     <p>Aliquam ac tortor efficitur, faucibus est et, consectetur erat. Duis nec condimentum erat. Suspendisse potenti. Integer ut lectus fringilla urna egestas suscipit.</p>
                     <small>HTML5, CSS3, JS, React, Sass, WordPress, WooCommerce, Bootstrap </small>
                     <div class="icons"><img src="img/html5.svg" /><img src="img/css3.svg" /><img src="img/js.svg" /><img src="img/sass.svg" /><img src="img/react.svg" /></div>
                 </div>
-                <div class="card half">
+                <div class="card">
                     <h3>Back-End Development</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel lorem nunc. Sed ligula eros, malesuada non tellus in, fermentum consequat quam.</p>
                     <p>Aliquam ac tortor efficitur, faucibus est et, consectetur erat. Duis nec condimentum erat. Suspendisse potenti. Integer ut lectus fringilla urna egestas suscipit.</p>
@@ -96,10 +101,6 @@
                     <div class="icons"><img src="img/wordpress.svg" /><img src="img/php.svg" /><img src="img/node.svg" /><img src="img/git.svg" /></div>
                 </div>
             </div>
-            
-            <!-- <h2>Education</h2>
-
-             -->
         </div>
         <img class="blob-2" src="./img/decorative-blob-2.svg" />
         <img class="star-2" src="./img/star.svg" />
@@ -107,7 +108,7 @@
     <section id="education">
         <div class="inner narrow">
             <h2>Education</h2>
-            <div class="row medium">
+            <div class="education-card-wrap medium">
                 <div class="card">
                     <h3>Full-Stack Engineering</h3>
                     <p>CodeCademy (2023 - Present)</p>
@@ -116,8 +117,8 @@
                         <li>Completed studies in CSS, HTML, JS, Node.js, RDBSM, PostGress, SQL, Design Patterns, TDD, Mocha, Chai</li>
                         <li>Awarded Full-Stacker of the Month February 2024</li>
                     </ul>
-                    </div></div><div class="row medium">
-                    <div class="card">
+                </div>
+                <div class="card">
                     <h3>Bachelor of Computer Based Design</h3>
                     <p>University of the Sunshine Coast</p>
                     <ul>
@@ -127,20 +128,64 @@
                 </div>
             </div>
         </div>
+        <img src="img/moon.svg" class="moon-b"/>
+        <img src="img/moon.svg" class="moon-s"/>
+        <img class="star-3" src="./img/star.svg" />
     </section>
+    <!-- <section id="projects">
+        <div class="inner">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div>
+                    <img src="./img/mbmg.gif" class="project-image"/>
+                    <h3>MBMG: Online learning platform</h3>
+                    <div class="tech-stack"><span>WordPress</span><span>JS</span><span>HTML5</span><span>CSS3</span><span>PHP Templating</span><span>API Integration</span><span>AJAX</span><span>SEO</span><span>In-house Project</span></div>
+                    <p><a href="https://mybigmoneygoal.com.au/" target="_blank" rel="nofollow">MBMG</a> is a large custom-built online learning application that features 52 weeks of paywalled content, API integrations with eventbrite and hubspot, downloadable learning resources and multiple interactive elements such as user onboarding, habit trackers, weekly to-do lists, learning roadmap, quartly goal setting and big money goal setting.</p>
+                </div>
+                <div>
+                    <img src="./img/fragile-annimals-website.png" class="project-image"/>
+                    <h3>Fragile Animals Website</h3>
+                    <div class="tech-stack"><span>UI/UX</span><span>JS</span><span>HTML5</span><span>CSS3</span><span>PHP Templating</span><span>Freelance</span></div>
+                    <p>Band website designed for Fragile Animals album launch.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
     <section id="projects">
         <div class="inner">
             <h2>Projects</h2>
-            <p>Here is a small collection of my work. Click on a project for more info or check out some of my code on <a href="https://github.com/MelindaH26" target="_blank">GitHub.</a><br/><small>Note: This is a brand new website so keep an eye out for more work coming very soon.</small></p>
+            <div class="project-grids">
+                <div class="project-row">
+                    <img src="./img/mbmg.gif" class="project-image"/>
+                    <div>
+                        <h3>MBMG: Online learning platform</h3>
+                        <p><a href="https://mybigmoneygoal.com.au/" target="_blank" rel="nofollow">MBMG</a> is a large custom-built online learning application that features 52 weeks of paywalled content, API integrations with eventbrite and hubspot, downloadable learning resources and multiple interactive elements such as user onboarding, habit trackers, weekly to-do lists, learning roadmap, quartly goal setting and big money goal setting.</p>
+                        <div class="tech-stack">
+                            <span>HTML5</span><span>CSS3</span><span>JS</span><span>JQuery</span><span>SQL</span><span>WordPress</span><span>PHP Templating</span><span>API Integration</span><span>AJAX</span><span>SEO</span><span>In-house Project</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-row">
+                    <img src="./img/fragile-annimals-website.png" class="project-image"/>
+                    <div>
+                        <h3>Fragile Animals Website</h3>
+                        <p>Band website designed for Fragile Animals album launch.</p>
+                        <div class="tech-stack">
+                            <span>UI/UX</span><span>HTML5</span><span>CSS3</span><span>JS</span><span>PHP Templating</span><span>Freelance</span>
+                        </div>
+                        <small>Note: This is a brand new website so keep an eye out for more work coming very soon.</small>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section id="contact">
         <div class="inner">
             <img class="p-moon" src="./img/p-moon.svg" />
             <h2>Contact</h2>
-            <div class="icons"><a href="" target="_blank"><img src="./img/github.svg" /></a><a href="" target="_blank"><img src="./img/linkedin.svg" /></a><a href="" target="_blank"><img src="./img/mail.svg" /></a></div>
-            <p><a href="mailto:min.huur@gmail.com" target="_blank">min.huur@gmail.com</a></p>
-            <p>If you’d like to work together, or chat about code or cute dogs, feel free to shoot me an email or add me on GitHub or LinkedIn.</p>
+            <div class="icons"><a href="https://github.com/MelindaH26" target="_blank"><img src="./img/github.svg" /></a><a href="https://www.linkedin.com/in/melinda-h/" target="_blank"><img src="./img/linkedin.svg" /></a><a href="mailto:min.huur@gmail.com"><img src="./img/mail.svg" /></a></div>
+            <p><a href="mailto:min.huur@gmail.com" class="email-link">min.huur@gmail.com</a></p>
+            <p>If you’d like to work together, or chat about code or cute dogs, feel free to shoot me an <a href="mailto:min.huur@gmail.com">email</a> or add me on <a href="https://github.com/MelindaH26" target="_blank">GitHub</a> or <a href="https://www.linkedin.com/in/melinda-h/" target="_blank">LinkedIn</a>.</p>
         </div>
         <img class="mountinan" src="./img/mountain.svg" />
     </section>
