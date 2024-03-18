@@ -222,17 +222,11 @@ Animations
     background: linear-gradient(var(--mid-purple), transparent);
 }
 #header .wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    position: relative;
     max-width: var(--max-width);
     padding: 40px 20px;
     margin: auto;
     transition: padding .7s ease-in-out;
-}
-
-#header.sticky .wrap {
-    padding: 10px 0px 20px;
 }
 
 #header img {
@@ -242,11 +236,14 @@ Animations
     transform: scale(.8);
 }
 
+.home-link {
+    display: inline-block;
+}
+
 nav ul {
-    display: flex;
     padding: 0;
     margin: auto;
-    font-size: 21px;
+    font-size: 30px;
     font-weight: 500;
 }
 nav ul li {
@@ -269,14 +266,79 @@ nav ul li a {
 }
 
 /* Hamburger Styles */
-#hamburger span {
-    display: block;
-    height: 6px;
-    width: 40px;
-    background: #fff;
-    border-radius: 3px;
-    &:nth-child(2), &:nth-child(3) {
-        margin-top: 6px;
+
+#hamburger {
+    float: right;
+    span {
+        width: 50px;
+        height: 5px;
+        background-color: #ffffff;
+        display: block;
+        margin: 8px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        border-radius: 3px;
+        &:nth-child(2), &:nth-child(3) {
+            margin-top: 6px;
+        }
+    }
+}
+
+#hamburger.is-active span:nth-child(2) {
+    opacity: 0;
+}
+  
+#hamburger.is-active span:nth-child(1) {
+    -webkit-transform: translateY(13px) rotate(45deg);
+    -ms-transform: translateY(13px) rotate(45deg);
+    -o-transform: translateY(13px) rotate(45deg);
+    transform: translateY(13px) rotate(45deg);
+}
+  
+#hamburger.is-active span:nth-child(3) {
+    -webkit-transform: translateY(-13px) rotate(-45deg);
+    -ms-transform: translateY(-13px) rotate(-45deg);
+    -o-transform: translateY(-13px) rotate(-45deg);
+    transform: translateY(-13px) rotate(-45deg);
+}  
+
+@media screen and (max-width: 820px) {
+    #main-nav {
+        text-align: right;
+        margin-top: 20px;
+        transform: translateY(-200%);
+        visibility: hidden;
+        height: 0;
+        opacity: 0;
+        transition: all .5s ease-in-out;
+        &.active {
+            height: 100%;
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    #header.sticky .wrap {
+        padding: 10px 20px 20px;
+    }
+}
+
+@media screen and (min-width: 821px) {
+    #header .wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    nav ul {
+        display: flex;
+        font-size: 21px;
+    }
+    #hamburger{
+        display: none;
+    }
+    #header.sticky .wrap {
+        padding: 10px 0px 20px;
     }
 }
 
@@ -475,6 +537,7 @@ nav ul li a {
 }
 
 .p-moon {
+    margin: auto;
     animation: float 7s ease-in-out infinite;
 }
 

@@ -3,7 +3,7 @@ let hamburger = document.getElementById('hamburger');
 let menu = document.getElementById('main-nav');
 
 hamburger.addEventListener('click', function() {
-  hamburger.classList.toggle('isactive');
+  hamburger.classList.toggle('is-active');
   menu.classList.toggle('active');
 });
 
