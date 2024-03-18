@@ -9,6 +9,7 @@ GLOBAL STYLES
     --mid-purple: #4945B6;
     --light-purple: #6A6DD9;
     --peach: #E7B6D6;
+    --orange: #fd946c;
     --light-blue: #ACC3FC;
     --section-padding-x: 20px;
     --section-padding-y: 60px
@@ -43,7 +44,7 @@ h1 {
 h2 {
     font-size: 50px;    
     font-weight: 900;
-    margin: 20px auto;
+    margin: 20px auto 30px;
 }
 h3 {
     font-size: 30px;    
@@ -58,12 +59,16 @@ h4 {
 
 p {
     font-weight: 400;
-    margin-block-start: 0.7em;
-    margin-block-end: 0.7em;
+    margin-block-start: 0.8em;
+    margin-block-end: 0.8em;
 }
 
 a {
-    color: var(--peach);
+    color: var(--orange);
+    transition: color .4s ease-in-out;
+    &:hover {
+        color: var(--light-blue);
+    }
 }
 
 /* Buttons */
@@ -85,6 +90,7 @@ a {
 .button:hover {  
     background-position: 15% 0;
     box-shadow: 0 0 9px #fff;
+    color: #fff;
 }
 
 /* Structure */
@@ -102,12 +108,7 @@ section {position: relative;}
     margin: auto;
     padding: var(--section-padding-y) var(--section-padding-x);
 }
-/* .row {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-} */
+
 .narrow {
     max-width: 750px;
 }
@@ -118,6 +119,10 @@ section {position: relative;}
 /* Classes */
 .center {
     text-align: center;
+}
+
+.grid-reverse {
+    order: -1;
 }
 
 /* Card Class */
@@ -251,6 +256,10 @@ nav ul li {
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
+    transition: color .3s ease-in-out;
+    &:hover {
+        color: var(--orange);
+    }
 }
 
 #current-section {
@@ -280,7 +289,6 @@ nav ul li a {
     top: 11%;
     right: calc(360px + 130px);
     animation: float-reverse 5s ease-in-out infinite;
-    scale: 0.8;
 }
 .moon {
     position: absolute;
@@ -293,7 +301,6 @@ nav ul li a {
     top: calc(361px + 23%);
     right: 0;
     animation: float-reverse 5s ease-in-out infinite;
-    scale: 0.6;
 }
 
 #intro {
@@ -305,8 +312,7 @@ nav ul li a {
     position: absolute;
     left: 0;
     bottom: 20%;
-    animation: float 6s ease-in-out infinite;
-    scale: 1.5;
+    animation: float 7s ease-in-out infinite;
 }
 .pop {
     position: absolute;
@@ -336,7 +342,6 @@ nav ul li a {
     position: absolute;
     top: 20%;
     left: 10%;
-    scale: .7;
     animation: float 5s ease-in-out infinite;
 }
 
@@ -346,6 +351,12 @@ nav ul li a {
     align-items: center;
     img {
         margin-right: 15px;
+    }
+    a:not(.button) {
+        transition: all .4s ease-in-out;
+    }
+    a:not(.button):hover {
+        scale: 1.15;
     }
 }
 
@@ -360,19 +371,10 @@ nav ul li a {
     grid-template-columns: 1fr;
 }
 
-.moon-s {
+.blob-4 {
     position: absolute;
-    left: calc(5% - 141px);
-    bottom: calc(5% + 114px);
-    scale: .25;
-    animation: float-reverse 5s ease-in-out infinite;
-}
-
-img.moon-b {
-    position: absolute;
-    left: 5%;
-    bottom: 5%;
-    scale: .8;
+    bottom: 0;
+    left: 0;
     animation: float 6s ease-in-out infinite;
 }
 
@@ -380,7 +382,6 @@ img.moon-b {
     position: absolute;
     top: 20%;
     right: 10%;
-    scale: .7;
     animation: float-reverse 4s ease-in-out infinite;
 }
 
@@ -390,14 +391,28 @@ img.moon-b {
     background: linear-gradient(var(--mid-purple), #201e50b8 40%,  #201e50b8);
 }
 
-.tech-stack span {
-    box-shadow: 0 0 8px #fff;
-    border-radius: 20px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    padding: 3px 9px;
-    font-size: 13px;
-    display: inline-block;
+.project-image-wrap {
+    padding: 20px;
+    img {
+        margin: auto;
+    }
+}
+
+.fragile-animals img {
+    max-width: 270px;
+}
+
+.tech-stack {
+    margin-top: 20px;
+    span {
+        box-shadow: 0 0 8px #fff;
+        border-radius: 20px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding: 3px 9px;
+        font-size: 13px;
+        display: inline-block;
+    }
 }
 
 .project-row {
@@ -406,12 +421,30 @@ img.moon-b {
     grid-gap: 40px;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
-/* .project-image {
-    padding: 20px;
-    margin: 0 auto;
-} */
+.lightning {
+    position: absolute;
+    right: 20%;
+    top: 5%;
+    animation: float 7s ease-in-out infinite;
+}
+
+.blob-3 {
+    position: absolute;
+    right: 0;
+    /* bottom: calc(20% - 194px); */
+    bottom: 15px;
+    animation: float-reverse 7s ease-in-out infinite;
+}
+
+.pop-2 {
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    animation: float-reverse 5s ease-in-out infinite;
+}
 
 /* Contact Section */
 #contact {
