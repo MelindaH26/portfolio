@@ -1,3 +1,12 @@
+// Hamburger Memnu
+let hamburger = document.getElementById('hamburger');
+let menu = document.getElementById('main-nav');
+
+hamburger.addEventListener('click', function() {
+  hamburger.classList.toggle('isactive');
+  menu.classList.toggle('active');
+});
+
 // Scrolling events
 let lastKnownScrollPosition = 0; // Variable to store the last known scroll position
 let debounceTimeout; // Variable to store the timeout ID for debounce
