@@ -51,7 +51,6 @@ h3 {
     font-weight: 900;
     margin: 0;
 }
-
 h4 {
     font-size: 25px;
     margin: 0;
@@ -224,13 +223,15 @@ Animations
 #header .wrap {
     position: relative;
     max-width: var(--max-width);
-    padding: 40px 20px;
     margin: auto;
     transition: padding .7s ease-in-out;
 }
+#header.sticky .wrap {
+    padding: 10px 20px 20px;
+}
 
 #header img {
-    transition: all .7s ease-in-out;
+    transition: all .6s ease-in-out;
 }
 #header.sticky img {
     transform: scale(.8);
@@ -265,67 +266,93 @@ nav ul li a {
     right: 0;
 }
 
-/* Hamburger Styles */
-
-#hamburger {
-    float: right;
-    span {
-        width: 50px;
-        height: 5px;
-        background-color: #ffffff;
-        display: block;
-        margin: 8px auto;
-        -webkit-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        border-radius: 3px;
-        &:nth-child(2), &:nth-child(3) {
-            margin-top: 6px;
-        }
-    }
-}
-
-#hamburger.is-active span:nth-child(2) {
-    opacity: 0;
-}
-  
-#hamburger.is-active span:nth-child(1) {
-    -webkit-transform: translateY(13px) rotate(45deg);
-    -ms-transform: translateY(13px) rotate(45deg);
-    -o-transform: translateY(13px) rotate(45deg);
-    transform: translateY(13px) rotate(45deg);
-}
-  
-#hamburger.is-active span:nth-child(3) {
-    -webkit-transform: translateY(-13px) rotate(-45deg);
-    -ms-transform: translateY(-13px) rotate(-45deg);
-    -o-transform: translateY(-13px) rotate(-45deg);
-    transform: translateY(-13px) rotate(-45deg);
-}  
-
 @media screen and (max-width: 820px) {
-    #main-nav {
-        text-align: right;
-        margin-top: 20px;
+    h1 {
+        font-size: 55px;
+    }
+    h2 {
+        font-size: 45px;    
+    }
+    h3 {
+        font-size: 30px;    
+    }
+    h4 {
+        font-size: 25px;
+    }    
+
+
+    #header .wrap {
+        padding: 20px;
+    }
+    #main-nav {    
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        width: calc(100% + 20px);
+        height: 100vh;
+        background: var(--light-purple);
+        display: flex;
+        text-align: center;
         transform: translateY(-200%);
         visibility: hidden;
-        height: 0;
         opacity: 0;
         transition: all .5s ease-in-out;
         &.active {
-            height: 100%;
             visibility: visible;
             opacity: 1;
             transform: translateY(0);
         }
     }
-    #header.sticky .wrap {
-        padding: 10px 20px 20px;
+
+    /* Hamburger Styles */
+    #hamburger {
+        position: fixed;
+        z-index: 999;
+        top: 40px;
+        right: 20px;
+        transition: top .6s ease-in-out;
+        span {
+            width: 50px;
+            height: 5px;
+            background-color: #ffffff;
+            display: block;
+            margin: 8px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            border-radius: 3px;
+            &:nth-child(2), &:nth-child(3) {
+                margin-top: 6px;
+            }
+        }
     }
+    #header.sticky #hamburger {
+        top: 12px;
+        right: 20px;
+    }
+
+    #hamburger.is-active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #hamburger.is-active span:nth-child(1) {
+        -webkit-transform: translateY(13px) rotate(45deg);
+        -ms-transform: translateY(13px) rotate(45deg);
+        -o-transform: translateY(13px) rotate(45deg);
+        transform: translateY(13px) rotate(45deg);
+    }
+    
+    #hamburger.is-active span:nth-child(3) {
+        -webkit-transform: translateY(-13px) rotate(-45deg);
+        -ms-transform: translateY(-13px) rotate(-45deg);
+        -o-transform: translateY(-13px) rotate(-45deg);
+        transform: translateY(-13px) rotate(-45deg);
+    }  
 }
 
 @media screen and (min-width: 821px) {
     #header .wrap {
+        padding: 40px 20px;
         display: flex;
         justify-content: space-between;
         align-items: baseline;
@@ -337,11 +364,10 @@ nav ul li a {
     #hamburger{
         display: none;
     }
-    #header.sticky .wrap {
-        padding: 10px 0px 20px;
+    #home h2 {
+        font-size: 60px;
     }
 }
-
 /* Home section */
 #home .inner {
     flex-direction: row;
@@ -351,7 +377,6 @@ nav ul li a {
 
 #home h2 {
     margin: 10px auto 25px;
-    font-size: 60px;
 }
 
 #home .button {

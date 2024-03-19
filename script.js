@@ -2,10 +2,13 @@
 let hamburger = document.getElementById('hamburger');
 let menu = document.getElementById('main-nav');
 
-hamburger.addEventListener('click', function() {
+const toggleClass = () => {
   hamburger.classList.toggle('is-active');
   menu.classList.toggle('active');
-});
+}
+
+hamburger.addEventListener('click', toggleClass);
+menu.addEventListener('click', toggleClass);
 
 // Scrolling events
 let lastKnownScrollPosition = 0; // Variable to store the last known scroll position
