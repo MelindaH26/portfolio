@@ -14,9 +14,7 @@ GLOBAL STYLES
     --section-padding-x: 20px;
     --section-padding-y: 60px
 }
-html{
-    
-    scroll-snap-type: y proximity;
+html {
     scroll-behavior: smooth;
 }
 body {
@@ -622,6 +620,12 @@ nav ul li a {
     /* classes */
     .grid-reverse {
         order: -1;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    html{  
+        scroll-snap-type: y proximity;
     }
 }
 
