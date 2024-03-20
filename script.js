@@ -38,7 +38,7 @@ function updateSection(sections) {
     const topDistance = section.getBoundingClientRect().top;
     let id = section.getAttribute('id');
     // If the distance to the top is between -100px and 150px
-    if (topDistance >= -100 && topDistance < 150) {
+    if (topDistance >= -150 && topDistance < 150) {
       // Update section number based on section ID
       switch (id) {
         case 'home':

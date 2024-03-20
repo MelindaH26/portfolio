@@ -263,11 +263,8 @@ nav ul li a {
         color: var(--orange);
     }
 }
-
 #current-section {
-    position: fixed;
-    bottom: 0;
-    right: 0;
+    visibility: hidden;
 }
 
 /* Home section */
@@ -625,6 +622,18 @@ nav ul li a {
     /* classes */
     .grid-reverse {
         order: -1;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #current-section {
+        visibility: visible;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        margin: 0;
+        font-size: 20px;
+        font-family: var(--font-monospace);
     }
 }
 
